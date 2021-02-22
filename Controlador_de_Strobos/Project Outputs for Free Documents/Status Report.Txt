@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Controlador de Strobo.PcbDoc]
+   Generated File[Controlador de Strobo.TXT]
+   Generated File[Controlador de Strobo.LDP]
+   Generated File[Controlador de Strobo.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 06:56:22 On 22/02/2021
