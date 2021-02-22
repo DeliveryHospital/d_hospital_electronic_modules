@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=CON? NewDesignator=CON9
+Added Member To Class: ClassName=Telemetria Member=Component U1 microcontrolador
+Added Room: Name=Telemetria
