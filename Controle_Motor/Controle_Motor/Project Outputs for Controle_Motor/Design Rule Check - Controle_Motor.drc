@@ -1,11 +1,11 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Controle_Motor\Controle_Motor\Controle_Motor.PcbDoc
-Date     : 24/02/2021
-Time     : 18:41:34
+Date     : 25/02/2021
+Time     : 20:42:11
 
 Processing Rule : Clearance Constraint (Gap=19.685mil) (All),(All)
-   Violation between Clearance Constraint: (18.504mil < 19.685mil) Between Pad Q1-1(1510mil,3635mil) on Multi-Layer And Pad Q1-2(1410mil,3635mil) on Multi-Layer 
-   Violation between Clearance Constraint: (18.504mil < 19.685mil) Between Pad Q1-2(1410mil,3635mil) on Multi-Layer And Pad Q1-3(1310mil,3635mil) on Multi-Layer 
+   Violation between Clearance Constraint: (18.504mil < 19.685mil) Between Pad Q1-1(1685mil,3690mil) on Multi-Layer And Pad Q1-2(1685mil,3790mil) on Multi-Layer 
+   Violation between Clearance Constraint: (18.504mil < 19.685mil) Between Pad Q1-2(1685mil,3790mil) on Multi-Layer And Pad Q1-3(1685mil,3890mil) on Multi-Layer 
 Rule Violations :2
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
@@ -47,4 +47,4 @@ Rule Violations :0
 
 Violations Detected : 2
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
