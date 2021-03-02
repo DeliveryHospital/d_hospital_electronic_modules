@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc
-Date     : 01/03/2021
-Time     : 21:47:22
+Date     : 02/03/2021
+Time     : 10:42:37
 
 Processing Rule : Clearance Constraint (Gap=0.5mm) (All),(All)
 Rule Violations :0
@@ -29,9 +29,7 @@ Processing Rule : Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)
    Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-5(36.83mm,97.536mm) on Multi-Layer Actual Hole Size = 0.7mm
    Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-6(36.83mm,100.076mm) on Multi-Layer Actual Hole Size = 0.7mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (18.796mm,94.234mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
-   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (18.923mm,88.281mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
-   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (21.082mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
-   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (25.527mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (18.923mm,86.741mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (47.689mm,68.11mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (47.689mm,70.376mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (51.689mm,90.297mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
@@ -42,7 +40,7 @@ Processing Rule : Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (57.531mm,68.199mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (59.42mm,109.932mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (63.373mm,109.982mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
-Rule Violations :20
+Rule Violations :18
 
 Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
 Rule Violations :0
@@ -63,6 +61,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 20
+Violations Detected : 18
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
