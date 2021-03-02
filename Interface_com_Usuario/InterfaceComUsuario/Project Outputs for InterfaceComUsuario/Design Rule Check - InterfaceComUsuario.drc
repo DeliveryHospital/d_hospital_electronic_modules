@@ -1,0 +1,68 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc
+Date     : 01/03/2021
+Time     : 21:47:22
+
+Processing Rule : Clearance Constraint (Gap=0.5mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.7mm) (Max=4mm) (Preferred=1mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-1(29.21mm,100.076mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-2(29.21mm,97.536mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-3(29.21mm,94.996mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-4(36.83mm,94.996mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-5(36.83mm,97.536mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.7mm < 0.75mm) Pad IC1-6(36.83mm,100.076mm) on Multi-Layer Actual Hole Size = 0.7mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (18.796mm,94.234mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (18.923mm,88.281mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (21.082mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (25.527mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (47.689mm,68.11mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (47.689mm,70.376mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (51.689mm,90.297mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (51.741mm,97.08mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (53.959mm,72.644mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (54.102mm,74.803mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (57.515mm,72.771mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (57.531mm,68.199mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (59.42mm,109.932mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (63.373mm,109.982mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+Rule Violations :20
+
+Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 20
+Waived Violations : 0
+Time Elapsed        : 00:00:01

@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=sc1 Pin=CON1-5
+Added Pin To Net: NetName=sc1 Pin=U1-27
+Added Net: Name=sc1
+Added Pin To Net: NetName=sc2 Pin=CON4-5
+Added Pin To Net: NetName=sc2 Pin=U1-29
+Added Net: Name=sc2
+Added Room: Name=InterfaceComUsuario

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=buttom_2 Pin=CON2-2
+Removed Pin From Net: NetName=buttom Pin=CON2-3
+Removed Pin From Net: NetName=buttom_2 Pin=R1-2
+Removed Pin From Net: NetName=buttom Pin=R11-2
+Added Pin To Net: NetName=buttom Pin=CON2-2
+Added Pin To Net: NetName=buttom_2 Pin=CON2-3
+Added Pin To Net: NetName=buttom Pin=R1-2
+Added Pin To Net: NetName=buttom_2 Pin=R11-2
+Added Room: Name=InterfaceComUsuario

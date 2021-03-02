@@ -1,0 +1,388 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">01/03/2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:47:22</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc" class="file"><acronym title="C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc">C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">20</td></tr>
+</table>
+</td>
+</table><a name="IDJDPNH1MSE0MGKQSVVC12UPOOZFI5TDW2RP5BRXDEBDQJORNWJ3KO"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTTXKUDBAFA3EE20XWCD3KJIUUKHS1X0TFPCZM2ISB20TORIW5WVF">Clearance Constraint (Gap=0.5mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYFXOQX2DTIIXB3WMNEDQFDTOBGOFFGQPFQZ2QUD4GY0JNYUVQ0AO">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL5J0USF2F342LAOR05AM3HTHCLBN0QNCE2VWFBBXJ1GVMCSPHVCD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNVWSDSMPGXQ3FOMZY52TZOX1LNSDYAK1C2JCAACOIRLWFYAAQYUN">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTBSKZMTZXBWEFUBQBL4RKXLDEF4SE2HGKNBQOCIFJUHHCWLOJAJP">Width Constraint (Min=0.7mm) (Max=4mm) (Preferred=1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDC4BCGUPTMSYRLZP0QXZ2K3R0CQ4BTIDUGWECBLR5HWJ0MIA011K">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDV5SOPHZHP1CYH3LC3TPBHDIRUFUWES5Y0YGO2NCFCKUT05L1ECUI">Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)</a></td>
+<td class="column2">20</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZYGQ2XYLK3DGD5EGDGXM44THQDTMFM3W4KYMANINJSSR33EPPNNL">Hole To Hole Clearance (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSR5I1BAKIGPMCODN4SUJSH2ATHGXNOKJGQ52HJFJ4ZW3CI1R0X4B">Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPW51R2SS5Q1PLJDYPDR03IU50NS3IDRBHFUV2XPYQWSPMNL55F0O">Silk To Solder Mask (Clearance=0mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDO1RZDDUDENENDTW3KGFYVX4PYMYZNNMPSABC3JEDHGU1NULLE1RP">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSMEKP2ZQQJZLPXIWZYCFHT2DJICZEN11WIEDNRNTAFPVMVC5LRUO">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGQANTLSNA5FYMWAIVJMAZVKG3NPFCICHI4EIWYBGAZZY1EK4UE3M">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">20</td>
+</tr>
+</table><br><a name="IDV5SOPHZHP1CYH3LC3TPBHDIRUFUWES5Y0YGO2NCFCKUT05L1ECUI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4930.596mil|Location2.Y=4964.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4930.596mil|Location2.Y=4964.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-1(29.21mm,100.076mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4830.596mil|Location2.Y=4864.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4830.596mil|Location2.Y=4864.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-2(29.21mm,97.536mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4730.596mil|Location2.Y=4764.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2130.595mil|Location2.X=2164.703mil|Location1.Y=4730.596mil|Location2.Y=4764.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-3(29.21mm,94.996mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4730.596mil|Location2.Y=4764.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4730.596mil|Location2.Y=4764.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-4(36.83mm,94.996mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4830.596mil|Location2.Y=4864.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4830.596mil|Location2.Y=4864.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-5(36.83mm,97.536mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4930.596mil|Location2.Y=4964.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.595mil|Location2.X=2464.703mil|Location1.Y=4930.596mil|Location2.Y=4964.894mil|Absolute=True">Hole Size Constraint: (0.7mm &lt; 0.75mm) Pad IC1-6(36.83mm,100.076mm) on Multi-Layer Actual Hole Size = 0.7mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1720.375mil|Location2.X=1755.085mil|Location1.Y=4700.375mil|Location2.Y=4735.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1720.375mil|Location2.X=1755.085mil|Location1.Y=4700.375mil|Location2.Y=4735.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (18.796mm,94.234mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1725.375mil|Location2.X=1760.085mil|Location1.Y=4466.005mil|Location2.Y=4500.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1725.375mil|Location2.X=1760.085mil|Location1.Y=4466.005mil|Location2.Y=4500.913mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (18.923mm,88.281mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1810.375mil|Location2.X=1845.085mil|Location1.Y=2040.375mil|Location2.Y=2075.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1810.375mil|Location2.X=1845.085mil|Location1.Y=2040.375mil|Location2.Y=2075.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (21.082mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1985.375mil|Location2.X=2020.085mil|Location1.Y=2040.375mil|Location2.Y=2075.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1985.375mil|Location2.X=2020.085mil|Location1.Y=2040.375mil|Location2.Y=2075.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (25.527mm,26.67mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2857.895mil|Location2.X=2892.604mil|Location1.Y=3671.862mil|Location2.Y=3706.769mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2857.895mil|Location2.X=2892.604mil|Location1.Y=3671.862mil|Location2.Y=3706.769mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (47.689mm,68.11mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2857.895mil|Location2.X=2892.604mil|Location1.Y=3761.074mil|Location2.Y=3795.982mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2857.895mil|Location2.X=2892.604mil|Location1.Y=3761.074mil|Location2.Y=3795.982mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (47.689mm,70.376mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3015.375mil|Location2.X=3050.085mil|Location1.Y=4545.375mil|Location2.Y=4580.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3015.375mil|Location2.X=3050.085mil|Location1.Y=4545.375mil|Location2.Y=4580.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (51.689mm,90.297mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3017.409mil|Location2.X=3052.119mil|Location1.Y=4812.409mil|Location2.Y=4847.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3017.409mil|Location2.X=3052.119mil|Location1.Y=4812.409mil|Location2.Y=4847.316mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (51.741mm,97.08mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3104.745mil|Location2.X=3139.455mil|Location1.Y=3850.375mil|Location2.Y=3885.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3104.745mil|Location2.X=3139.455mil|Location1.Y=3850.375mil|Location2.Y=3885.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (53.959mm,72.644mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3110.375mil|Location2.X=3145.085mil|Location1.Y=3935.375mil|Location2.Y=3970.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3110.375mil|Location2.X=3145.085mil|Location1.Y=3935.375mil|Location2.Y=3970.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (54.102mm,74.803mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3244.745mil|Location2.X=3279.455mil|Location1.Y=3855.375mil|Location2.Y=3890.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3244.745mil|Location2.X=3279.455mil|Location1.Y=3855.375mil|Location2.Y=3890.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (57.515mm,72.771mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3245.375mil|Location2.X=3280.085mil|Location1.Y=3675.375mil|Location2.Y=3710.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3245.375mil|Location2.X=3280.085mil|Location1.Y=3675.375mil|Location2.Y=3710.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (57.531mm,68.199mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3319.759mil|Location2.X=3354.469mil|Location1.Y=5318.388mil|Location2.Y=5353.296mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3319.759mil|Location2.X=3354.469mil|Location1.Y=5318.388mil|Location2.Y=5353.296mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (59.42mm,109.932mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3475.375mil|Location2.X=3510.085mil|Location1.Y=5320.375mil|Location2.Y=5355.283mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Interface_com_Usuario\InterfaceComUsuario\InterfaceComUsuario.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3475.375mil|Location2.X=3510.085mil|Location1.Y=5320.375mil|Location2.Y=5355.283mil|Absolute=True">Hole Size Constraint: (0.711mm &lt; 0.75mm) Via (63.373mm,109.982mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

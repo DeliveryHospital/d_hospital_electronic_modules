@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=motor_e2 Pin=CON9-2
+Removed Pin From Net: NetName=motor_e3 Pin=CON9-3
+Removed Pin From Net: NetName=motor_e4 Pin=CON9-4
+Added Pin To Net: NetName=motor_e2 Pin=CON9-3
+Change Net Name : Old Net Name=motor_d2 New Net Name=-motor_d1
+Change Net Name : Old Net Name=motor_d3 New Net Name=motor_d2
+Change Net Name : Old Net Name=motor_d4 New Net Name=-motor_d2
+Added Pin To Net: NetName=-motor_e1 Pin=CON9-2
+Added Net: Name=-motor_e1
+Added Pin To Net: NetName=-motor_e2 Pin=CON9-4
+Added Net: Name=-motor_e2
+Added Room: Name=InterfaceComUsuario

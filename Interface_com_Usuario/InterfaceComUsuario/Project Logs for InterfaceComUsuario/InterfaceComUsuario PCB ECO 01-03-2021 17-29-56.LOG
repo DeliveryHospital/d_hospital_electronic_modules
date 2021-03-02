@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=3V3 Pin=CON1-8
+Removed Pin From Net: NetName=3V3 Pin=CON4-8
+Added Pin To Net: NetName=3V3p Pin=CON1-8
+Added Pin To Net: NetName=3V3p Pin=CON4-8
+Added Member To Class: ClassName=InterfaceComUsuario Member=Component R11 RES 470R 1/4W CARBON FILM
+Added Room: Name=InterfaceComUsuario
