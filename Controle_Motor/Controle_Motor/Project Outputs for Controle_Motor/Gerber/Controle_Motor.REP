@@ -2,16 +2,6 @@
 FileName = Controle_Motor.GBR
 AutoAperture = True
 *************************************************************
-Generating : Bottom Overlay
-      File : Controle_Motor.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
 Generating : Bottom Layer
       File : Controle_Motor.GBL
 
@@ -36,6 +26,21 @@ Used DCodes :
     D22
     D23
     D24
+    D25
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Controle_Motor.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
@@ -50,7 +55,6 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D25
     D26
     D27
     D28
@@ -64,17 +68,14 @@ Used DCodes :
     D36
     D37
     D38
+    D39
 *************************************************************
 
 *************************************************************
-Generating : Bottom Paste
-      File : Controle_Motor.GBP
+Generating : Bottom Overlay
+      File : Controle_Motor.GBO
 
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
