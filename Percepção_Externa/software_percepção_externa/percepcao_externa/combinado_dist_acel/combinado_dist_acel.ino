@@ -100,6 +100,7 @@ void setID() {
   digitalWrite(SHT_LOX6, HIGH);
   delay(10);
 
+  /*
   // activating LOX1 and reseting all
   digitalWrite(SHT_LOX1, HIGH);
   digitalWrite(SHT_LOX2, LOW);
@@ -141,7 +142,7 @@ void setID() {
     while(1);
   }
   delay(10);
-
+*/
   // activating LOX4 and reseting all
   digitalWrite(SHT_LOX4, HIGH);
   digitalWrite(SHT_LOX5, LOW);
@@ -182,13 +183,13 @@ void setID() {
 
 void read_dual_sensors() {
   
-  lox1.rangingTest(&measure1, false); // pass in 'true' to get debug data printout!
-  lox2.rangingTest(&measure2, false); // pass in 'true' to get debug data printout!
-  lox3.rangingTest(&measure3, false); // pass in 'true' to get debug data printout!
+  //lox1.rangingTest(&measure1, false); // pass in 'true' to get debug data printout!
+  //lox2.rangingTest(&measure2, false); // pass in 'true' to get debug data printout!
+  //lox3.rangingTest(&measure3, false); // pass in 'true' to get debug data printout!
   lox4.rangingTest(&measure4, false); // pass in 'true' to get debug data printout!
   lox5.rangingTest(&measure5, false); // pass in 'true' to get debug data printout!
   lox6.rangingTest(&measure6, false); // pass in 'true' to get debug data printout!
-
+  /*
   // print sensor one reading
   Serial.print(F("1: "));
   if(measure1.RangeStatus != 4) {     // if not out of range
@@ -223,7 +224,7 @@ void read_dual_sensors() {
     measureToSend3 = OUT_OF_RANGE;
   }
    Serial.print(F(" "));
-   
+   */
   // print sensor four reading
   Serial.print(F("4: "));
   if(measure4.RangeStatus != 4) {
@@ -498,7 +499,7 @@ void setup() {
  
 void loop() {
   //readRawMPU();    // lê os dados do acelerometro
-  //read_dual_sensors(); // lê dados sensor de distancia
+  read_dual_sensors(); // lê dados sensor de distancia
   WireSlave1.update();
   delay(1);  
 }
