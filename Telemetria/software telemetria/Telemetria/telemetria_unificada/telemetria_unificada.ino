@@ -71,8 +71,7 @@ void readCurrent(){
   potencia1 = 0.0;
   potencia2 = 0.0;
  
-  for(int i = 0; i < 300; i++)
-  {
+  for(int i = 0; i < 300; i++){
     vetCorrente1[i] = analogRead(pin_corrente1);
     vetCorrente2[i] = analogRead(pin_corrente2);
     delayMicroseconds(600);
@@ -156,7 +155,11 @@ void sendFloatI2C(float toSend){
 void loop()
 {
   WireSlave.update();
-  delay(1);
+  println(readCurrent());
+  println(readBattery());
+  println(readTemp());
+  
+  delay(100);
 }
 
 void recieveEvent(int howMany){
