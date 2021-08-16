@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\Vanderson\Desktop\ESCOLA POLITECNICA\PUBs\PUB II\projetos\Modulos-Eletronicos\Controle_Motor\Controle_Motor\Controle_Motor.PcbDoc
-Date     : 11/08/2021
-Time     : 18:53:01
+PCB File : C:\Users\DeliveryRobot\Desktop\Vanderson\Modulos-Eletronicos\Controle_Motor\Controle_Motor\Controle_Motor.PcbDoc
+Date     : 16/08/2021
+Time     : 18:34:05
 
 Processing Rule : Clearance Constraint (Gap=0.5mm) (All),(All)
    Violation between Clearance Constraint: (0.47mm < 0.5mm) Between Pad Q1-1(45.466mm,93.853mm) on Multi-Layer And Pad Q1-2(45.466mm,96.393mm) on Multi-Layer 
@@ -25,10 +25,10 @@ Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (
 Rule Violations :0
 
 Processing Rule : Hole Size Constraint (Min=0.75mm) (Max=3mm) (All)
-   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (24.892mm,43.815mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (24.765mm,40.894mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (31.369mm,64.516mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
    Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (31.369mm,76.073mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
-   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (31.496mm,43.688mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
+   Violation between Hole Size Constraint: (0.711mm < 0.75mm) Via (31.623mm,40.767mm) from Top Layer to Bottom Layer Actual Hole Size = 0.711mm
 Rule Violations :4
 
 Processing Rule : Hole To Hole Clearance (Gap=0.1mm) (All),(All)
@@ -52,4 +52,4 @@ Rule Violations :0
 
 Violations Detected : 7
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
