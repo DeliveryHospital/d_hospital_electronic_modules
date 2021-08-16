@@ -27,20 +27,8 @@ Used DCodes :
     D23
     D24
     D25
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : Controle_Motor.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
+    D26
+    D27
 *************************************************************
 
 *************************************************************
@@ -55,8 +43,6 @@ Generating : Bottom Solder
 
 
 Used DCodes :
-    D26
-    D27
     D28
     D29
     D30
@@ -69,6 +55,24 @@ Used DCodes :
     D37
     D38
     D39
+    D40
+    D41
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Controle_Motor.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
 *************************************************************
 
 *************************************************************
