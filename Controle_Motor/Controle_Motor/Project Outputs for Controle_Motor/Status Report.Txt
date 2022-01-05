@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Controle_Motor.PcbDoc]
+   Generated File[Controle_Motor.TXT]
+   Generated File[Controle_Motor.LDP]
+   Generated File[Controle_Motor.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 19:00:00 On 11/08/2021

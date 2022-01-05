@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=MOSI Pin=CON?-2
+Removed Pin From Net: NetName=CLK Pin=CON?-4
+Added Pin To Net: NetName=CLK Pin=CON?-2
+Added Pin To Net: NetName=MOSI Pin=CON?-4
+Added Room: Name=Controle_Motor

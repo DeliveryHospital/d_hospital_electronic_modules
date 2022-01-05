@@ -1,0 +1,22 @@
+Added Member To Class: ClassName=Sinalização Member=Component C1 Cap. Elet. 470 uF 16V
+Added Member To Class: ClassName=Sinalização Member=Component C2 Cap. Elet. 470 uF 16V
+Added Member To Class: ClassName=Sinalização Member=Component CON1 KK_2.54_3vias
+Added Member To Class: ClassName=Sinalização Member=Component CON2 KK_2.54_5vias
+Added Member To Class: ClassName=Sinalização Member=Component CON3 KK_2.54_3vias
+Added Member To Class: ClassName=Sinalização Member=Component CON4 KK_2.54_4vias
+Added Member To Class: ClassName=Sinalização Member=Component CON5 KK_2.54_2vias
+Added Member To Class: ClassName=Sinalização Member=Component CON6 KK_2.54_2vias
+Added Member To Class: ClassName=Sinalização Member=Component CON7 KK_2.54_3vias
+Added Member To Class: ClassName=Sinalização Member=Component CON8 KK_2.54_3vias
+Added Member To Class: ClassName=Sinalização Member=Component CON9 KK_2.54_2vias
+Added Member To Class: ClassName=Sinalização Member=Component CON10 KK_2.54_4vias
+Added Member To Class: ClassName=Sinalização Member=Component D1 LED 5MM RED
+Added Member To Class: ClassName=Sinalização Member=Component Q1 BC549
+Added Member To Class: ClassName=Sinalização Member=Component R2 RES 470R 1/4W CARBON FILM
+Added Member To Class: ClassName=Sinalização Member=Component R3 RES 1/4W CARBON FILM
+Added Member To Class: ClassName=Sinalização Member=Component R4 RES 1/4W CARBON FILM
+Added Member To Class: ClassName=Sinalização Member=Component R5 4.7K
+Added Member To Class: ClassName=Sinalização Member=Component R6 4.7K
+Added Member To Class: ClassName=Sinalização Member=Component  Conversor de nível logico
+Added Member To Class: ClassName=Sinalização Member=Component U1 microcontrolador
+Added Room: Name=Sinalização

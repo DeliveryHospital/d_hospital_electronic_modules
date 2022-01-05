@@ -1,0 +1,4 @@
+*.PrjPcb              -diff -merge
+*.PrjPcb              linguist-generated=true
+*.PrjPcbStructure     -diff -merge
+*.PrjPcbStructure     linguist-generated=true

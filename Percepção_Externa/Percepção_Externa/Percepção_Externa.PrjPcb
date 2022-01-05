@@ -63,7 +63,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -158,43 +158,81 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document8]
+DocumentPath=Schlib1.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GMYPQZMG
+
+[Document9]
+DocumentPath=sensores.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RYUANVXI
+
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Free Documents\NC Drill\Percepção_Externa.DRR
+DocumentPath=Project Outputs for Percepção_Externa\Design Rule Check - Percepção_Externa.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.EXTREP
+DocumentPath=Project Outputs for Free Documents\NC Drill\Percepção_Externa.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBL
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBO
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBP
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBS
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for Free Documents\NC Drill\Percepção_Externa.LDP
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.REP
+DocumentPath=Project Outputs for Free Documents\NC Drill\Percepção_Externa.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.RUL
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.REP
 DItemRevisionGUID=
 
 [GeneratedDocument10]
+DocumentPath=Project Outputs for Free Documents\Gerber\Percepção_Externa.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument11]
 DocumentPath=Project Outputs for Free Documents\NC Drill\Percepção_Externa.TXT
 DItemRevisionGUID=
 
@@ -317,7 +355,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=MiWiFi-R3-srv (HP DeskJet 5820 series)
+TargetPrinter=HP LaserJet P1505
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -522,6 +560,12 @@ OutputName6=Report Single Pin Nets
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
+OutputType7=Export Comments
+OutputName7=Export Comments
+OutputDocumentPath7=
+OutputVariantName7=[No Variations]
+OutputDefault7=0
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup7]
 Name=Other Outputs
